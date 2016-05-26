@@ -24,6 +24,13 @@ I wanted a better one for my own needs.
 * ##### and mimics Github's markdown rendering :suspect: :+1: :heart:
 > *so far, so good...*
 
+#### Video of the functionality
+
+A brief video that shows what this minor mode does
+
+https://www.youtube.com/watch?v=-mb9_501Ipo&feature=youtu.be
+
+
 #### Usage
 
 With a markdown file open in a buffer, just call `(vmd-mode)`.
