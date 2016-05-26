@@ -120,3 +120,4 @@
   (if vmd-mode (vmd-mode/start) (vmd-mode/stop)))
 
 (provide 'vmd-mode)
+;;; vmd-mode.el ends here
