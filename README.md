@@ -16,10 +16,11 @@ Clone this repo, and `(require 'vmd-mode)` or `(use-package vmd-mode)`
 I wanted a better one for my own needs.
 
 * ##### It's *fast*
-> *(`vmd` is using node's `fsnotify` to watch that temp file, and emacs is writing
-> that temp file in the buffer's `after-change-functions`. In my experience, this is *significantly* more responsive than any websocket-based
-> implementation, and this makes editing documentation more fun, which increases the likelyhood that I will document
-> things, and generally leads to Good Times.*
+> In my experience, it's no problem to have pretty gigantic Markdown files (thousands of lines) and the thing stays responsive.
+> `vmd` is using node's `fsnotify` to watch that temp file, and emacs is writing
+> that temp file in the buffer's `after-change-functions`. This is always going to be faster than any websocket-based
+> implementation, and I find this makes editing documentation more fun, which increases the likelyhood that I will document
+> things, and generally leads to Good Times.
 
 * ##### and mimics Github's markdown rendering :suspect: :+1: :heart:
 > *so far, so good...*
