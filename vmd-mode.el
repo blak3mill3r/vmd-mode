@@ -24,8 +24,14 @@
 (defvar-local vmd-preview-file nil
   "Temp file which is watched by the vmd process")
 
+(defgroup vmd nil
+  "Fast Github-flavored Markdown preview using a vmd subprocess."
+  :prefix "vmd-"
+  :group 'text)
+
 (defcustom vmd-binary-path (executable-find "vmd")
-  "Path to your vmd binary.")
+  "Path to your vmd binary."
+  :group 'vmd)
 
 (defvar vmd-mode-github-emojis-list
   '(":" "-1:" "+1:" "100:" "1234:" "8ball:" "a:" "ab:" "abc:" "abcd:" "accept:"
