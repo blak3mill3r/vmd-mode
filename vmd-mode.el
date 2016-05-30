@@ -24,7 +24,7 @@
 (defvar-local vmd-preview-file nil
   "Temp file which is watched by the vmd process")
 
-(defvar vmd-binary-path (executable-find "vmd")
+(defcustom vmd-binary-path (executable-find "vmd")
   "Path to your vmd binary.")
 
 (defvar vmd-mode/github-emojis-list
