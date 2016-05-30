@@ -1,5 +1,4 @@
 ;;; vmd-mode.el --- Fast Github-flavored Markdown preview using a vmd subprocess.
-;; requires Emacs >= 24.3
 
 ;; Copyright (C) 2016 Blake Miller
 
@@ -7,6 +6,7 @@
 ;; Version: 0.2.0
 ;; Keywords: markdown, preview, live, vmd
 ;; URL: https://github.com/blak3mill3r/vmd-mode.el
+;; Package-Requires: ((emacs "24.3"))
 
 ;;; Commentary:
 
