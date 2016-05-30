@@ -1,4 +1,5 @@
-;;; vmd-mode.el --- Fast GHF Markdown previewing for Emacs using a vmd subprocess.
+;;; vmd-mode.el --- Fast Github-flavored Markdown preview using a vmd subprocess.
+;; requires Emacs >= 24.3
 
 ;; Copyright (C) 2016 Blake Miller
 
