@@ -27,7 +27,7 @@
 (defcustom vmd-binary-path (executable-find "vmd")
   "Path to your vmd binary.")
 
-(defvar vmd-mode/github-emojis-list
+(defvar vmd-mode-github-emojis-list
   '(":" "-1:" "+1:" "100:" "1234:" "8ball:" "a:" "ab:" "abc:" "abcd:" "accept:"
     "aerial_tramway:" "airplane:" "alarm_clock:" "alien:" "ambulance:" "anchor:"
     "angel:" "anger:" "angry:" "anguished:" "ant:" "apple:" "aquarius:" "aries:"
@@ -192,12 +192,12 @@
     "womans_clothes:" "womans_hat:" "womens:" "worried:" "wrench:" "x:"
     "yellow_heart:" "yen:" "yum:" "zap:" "zero:" "zzz:"))
 
-(defun vmd-mode/start-vmd-process ()
+(defun vmd-mode-start-vmd-process ()
   "Start an asynchronous `vmd' process to generate the `vmd-preview-file' file."
   (setq vmd-preview-file (make-temp-file "vmd-preview"))
   (setq vmd-process (start-process "vmd" "vmd" vmd-binary-path vmd-preview-file)))
 
-(defun vmd-mode/refresh (&rest args)
+(defun vmd-mode-refresh (&rest args)
   "Update the `vmd-preview-file'.
 The optional ARGS argument is needed as this function is added to the
 `after-change-functions' hook."
@@ -210,13 +210,13 @@ The optional ARGS argument is needed as this function is added to the
   (if vmd-mode
       (if vmd-binary-path
           (progn
-            (add-hook 'after-change-functions #'vmd-mode/refresh nil t)
-            (vmd-mode/start-vmd-process)
-            (vmd-mode/refresh))
+            (add-hook 'after-change-functions #'vmd-mode-refresh nil t)
+            (vmd-mode-start-vmd-process)
+            (vmd-mode-refresh))
         (user-error "You need to have `vmd' installed in your environment PATH."))
     (progn
       (delete-process vmd-process)
-      (remove-hook 'after-change-functions #'vmd-mode/refresh t))))
+      (remove-hook 'after-change-functions #'vmd-mode-refresh t))))
 
 
 (provide 'vmd-mode)
