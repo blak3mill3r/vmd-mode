@@ -5,7 +5,7 @@
 ;; Author: Blake Miller <blak3mill3r@gmail.com>
 ;; Version: 0.2.0
 ;; Keywords: markdown, preview, live, vmd
-;; URL: https://github.com/blak3mill3r/vmd-mode.el
+;; URL: https://github.com/blak3mill3r/vmd-mode
 ;; Package-Requires: ((emacs "24.3"))
 
 ;;; Commentary:
