@@ -60,12 +60,12 @@ See https://developer.github.com/v3/emojis/"
       (insert "\n"))))
 
 (defvar vmd-mode-github-emojis-list
-  (with-temp-buffer
-    (insert-file-contents vmd-mode--emojis-file)
-    (split-string (buffer-string) "\n" t))
+  (and (file-exists-p vmd-mode--emojis-file)
+       (with-temp-buffer
+         (insert-file-contents vmd-mode--emojis-file)
+         (split-string (buffer-string) "\n" t)))
   "Emoji for GitHub.")
 
-
 (defun vmd-mode-start-vmd-process ()
   "Start an asynchronous `vmd' process to generate the `vmd-preview-file' file."
   (setq vmd-preview-file (make-temp-file "vmd-preview"))
