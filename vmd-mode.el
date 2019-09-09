@@ -93,7 +93,7 @@ See https://developer.github.com/v3/emojis/"
   "Update the `vmd-preview-file'.
 The optional ARGS argument is needed as this function is added to the
 `after-change-functions' hook."
-  (write-region (point-min) (point-max) vmd-copy-file))
+  (write-region (point-min) (point-max) vmd-copy-file nil 'quiet))
 
 ;;;###autoload
 (define-minor-mode vmd-mode
