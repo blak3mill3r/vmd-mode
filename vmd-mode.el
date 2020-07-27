@@ -102,7 +102,6 @@ The optional ARGS argument is needed as this function is added to the
   (if vmd-mode
       (if vmd-binary-path
           (progn
-            (setq debug-on-error t)
             (add-hook 'after-change-functions 'vmd-mode-refresh nil t)
             (add-hook 'kill-buffer-hook 'vmd-mode-delete-temp nil t)
             (vmd-mode-start-vmd-process)
